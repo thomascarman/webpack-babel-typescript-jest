@@ -5,47 +5,58 @@
 ## Run Development Server
 
 ```shell
-yarn dev
+npm run dev
 ```
+
+- Public Files will run at <a href="http://localhost:9000/">localhost:9000/</a>
+
+## Run Development Database
+
+```shell
+npm run serve
+```
+
+- API data will run at <a href="http://localhost:3000/api/">localhost:3000/api/</a>.
+- With Webpack dev Server can be reached at <a href="http://localhost:9000/api/">localhost:9000/api/</a>.
 
 ## Building the repo
 
 ```shell
-yarn build
+npm run build
 ```
 
 ## Building bundles
 
 ```shell
-yarn build:webpack
+npm run build:webpack
 ```
 
 ## Building js files
 
 ```shell
-yarn build:js
+npm run build:js
 ```
 
 ## Building types only
 
 ```shell
-yarn build:types
+npm run build:types
 ```
 
 ## Type-Checking the repo
 
 ```shell
-yarn type-check
+npm run type-check
 ```
 
 ## Testing
 
 ```shell
-yarn test
+npm run test
 ```
 
 ## Clear all build files (Deletes)
 
 ```shell
-yarn clean
+npm run clean
 ```
