@@ -7,6 +7,7 @@ module.exports = {
     index: "./src/index.ts",
   },
   output: {
+    publicPath: "/dist",
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist"),
   },
@@ -19,18 +20,21 @@ module.exports = {
         test: /\.tsx?$/i,
         loader: "babel-loader",
         exclude: /node_modules/,
-        options: {
-          // disable type checker - we will use it in fork plugin
-          //   transpileOnly: true,
-        },
       },
     ],
   },
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
+    contentBase: path.join(__dirname, "public"),
+    host: "localhost",
+    port: "9000",
+    inline: true,
     compress: true,
-    hot: true,
-    port: 9000,
+    proxy: {
+      "/api": {
+        target: "http://localhost:3000",
+        secure: false,
+      },
+    },
   },
   plugins: [new ForkTsCheckerWebpackPlugin()],
 };
