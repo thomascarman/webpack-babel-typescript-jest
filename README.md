@@ -19,7 +19,7 @@ npm run serve
 - API data will run at <a href="http://localhost:3000/api/">localhost:3000/api/</a>.
 - With Webpack dev Server can be reached at <a href="http://localhost:9000/api/">localhost:9000/api/</a>.
 
-## Building the repo
+## Building the repo (All JS Files and Types)
 
 ```shell
 npm run build
