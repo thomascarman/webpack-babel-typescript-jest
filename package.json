@@ -1,6 +1,7 @@
 {
   "name": "webpack-babel-typescript-jest",
   "version": "1.0.0",
+  "description": "Template for Webpack/Babel for typescript project and use of Jest for testing.",
   "license": "MIT",
   "author": {
     "name": "Thomas Carman"
